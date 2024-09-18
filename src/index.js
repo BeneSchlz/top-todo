@@ -1,9 +1,15 @@
 import { ToDo } from './logic.js';
-import { newProject } from './project.js';
+import { NewProject, projectList, inbox } from './project.js';
 
+let personal = new NewProject("Personal");
+projectList.push(personal);
 
-let myProject = new NewProject("Work Project");
-let myTask = new ToDo("Write report", "Finish quarterly report", "High", "2024-09-25");
+let work = new NewProject("Work");
+projectList.push(work);
 
-myProject.addTaskToProject(myTask);  // Adds the task to the project
-console.log(myProject.tasks);  // Should log the array with the added task
+console.log(projectList)
+
+let task1 = new ToDo("Buy groceries", "Go to the supermarket", "High", "2024-09-25");
+inbox.addTaskToProject(task1);  // Add a task to the inbox project
+
+console.log(inbox.tasks);

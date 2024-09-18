@@ -1,4 +1,7 @@
-let project = [];
+export let projectList = [];
+
+export let inbox = new NewProject("Inbox");
+projectList.push(inbox);
 
 export function NewProject (name) {
     this.name = name,
@@ -8,4 +11,5 @@ export function NewProject (name) {
         this.tasks.push(task);
     }
 }
+
 
