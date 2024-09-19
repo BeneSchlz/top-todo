@@ -39,6 +39,10 @@ padding: 0;
     display: none;
 }
 
+.hidden-priority {
+    display: none;
+}
+
 #title {
     width: 400px;
     height: 20px;

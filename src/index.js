@@ -1,5 +1,6 @@
 import { ToDo, openModal, openModalBtn, modal, overlay } from './logic.js';
 import { NewProject, projectList, inbox } from './project.js';
+import { priorityButton, priorityOptions } from './dom.js';
 import './styles.css';
 
 
@@ -19,3 +20,7 @@ inbox.addTaskToProject(task1);  // Add a task to the inbox project
 console.log(inbox.tasks);
 
 openModalBtn.addEventListener("click", openModal);
+
+priorityButton.addEventListener("click", () => {
+    priorityOptions.classList.toggle(".hidden-priority"); 
+});
