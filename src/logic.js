@@ -30,8 +30,15 @@ export const openModal = function() {
     }
 };
 
+const closeModal = function () {
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden")
+  };
+
 // Add event listener to openModalBtn
 if (openModalBtn) {
     openModalBtn.addEventListener("click", openModal);
 }
+
+overlay.addEventListener("click", closeModal);
 

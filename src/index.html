@@ -11,7 +11,33 @@
       <button class="add-task-modal" id="add-task-modal">+</button>
       <div class="modal hidden" id="modal">
         <div class="modal-content">
-        <button class="close-btn">x</button>
+        <form class="add-task-form">
+          <div class="modal-header">
+          <div class="task-name">
+            <input type="text" id="title" name="title" placeholder="Task name">
+          </div>
+          <div class="description">
+            <input type="text" id="description-input" name="description" placeholder="Description">
+          </div>
+        </div>
+        <div class="modal-mid-section">
+          <div class="priority-input">
+            <input type="button" onclick="alert('Hello World!')" value="Priority">
+          </div>
+          <div class="due-date-input">
+            <input type="date" id="due-date" name="due-date">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="project-btn">
+          <input type="button" onclick="alert('Hello World!')" value="Project">
+        </div>
+        <div class="footer-btn">
+          <button class="cancel-btn">Cancel</button>
+          <button class="add-task-btn">Add Task</button>
+        </div>
+        </div>
+        </form>
       </div>
       </div>
     </div>
