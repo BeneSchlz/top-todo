@@ -1,5 +1,6 @@
 import { ToDo } from './logic.js';
 import { NewProject, projectList, inbox } from './project.js';
+import './styles.css';
 
 let personal = new NewProject("Personal");
 projectList.push(personal);
