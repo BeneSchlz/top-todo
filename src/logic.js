@@ -1,6 +1,8 @@
+export let openModalBtn = document.querySelector(".add-task-modal");
+export let modal = document.getElementsByClassName("modal")[0]; // Access the first modal element
+export let overlay = document.querySelector(".overlay"); // Make sure you define overlay too
 
-
-//Object for Todos
+// Object for Todos
 export function ToDo(title, description, priorities, due) {
     this.taskName = title;
     this.description = description;
@@ -8,8 +10,28 @@ export function ToDo(title, description, priorities, due) {
     this.dueDate = due;
     this.completed = false;
 
-//change completed
+    // Change completed
     this.toggleCompleted = function() {
         this.completed = !this.completed; 
     };
 }
+
+export const openModal = function() {
+    if (modal) {
+        modal.classList.remove("hidden");
+    } else {
+        console.error("Modal not found");
+    }
+    
+    if (overlay) {
+        overlay.classList.remove("hidden"); // Check if overlay is defined
+    } else {
+        console.error("Overlay not found");
+    }
+};
+
+// Add event listener to openModalBtn
+if (openModalBtn) {
+    openModalBtn.addEventListener("click", openModal);
+}
+
