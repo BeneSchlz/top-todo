@@ -1,6 +1,6 @@
 import { ToDo, openModal, openModalBtn, modal, overlay } from './logic.js';
 import { NewProject, projectList, inbox } from './project.js';
-import { priorityButton, priorityOptions } from './dom.js';
+import { priorityButton, priorityOptions, handlePrioritySelection } from './dom.js';
 import './styles.css';
 
 
@@ -22,5 +22,11 @@ console.log(inbox.tasks);
 openModalBtn.addEventListener("click", openModal);
 
 priorityButton.addEventListener("click", () => {
-    priorityOptions.classList.toggle(".hidden-priority"); 
+    priorityOptions.classList.toggle("hidden-priority"); 
+});
+
+// Handle priority option selection
+const priorityOptionButtons = document.querySelectorAll('.priority-option');
+priorityOptionButtons.forEach(button => {
+    button.addEventListener('click', handlePrioritySelection);
 });
